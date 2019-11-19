@@ -1,4 +1,5 @@
 const express=require('express');
 const app=express();
-app.listen(3000,()=>{console.log('port startet at http://localhost:3000')})
+PORT=process.env.port||3000
+app.listen(PORT,()=>{console.log('port startet at http://localhost:3000')})
 app.get('/',express.static('./public'))
